@@ -1,6 +1,8 @@
 # Money Counter AI
 An AI tool that counts coins using computer vision
 
+![image info](./banner.png)
+
 ### Video Demonstration
 See YouTube video [Build A Computer Vision App from Start to Finish](https://www.youtube.com/playlist?list=PL4gEDuKXcNsN14oPI5TcjJy8yiFoqnNzp)
 
@@ -67,4 +69,4 @@ python3  preprocess.py
 ```
 If on Jupyter notebook, run the `preprocess_images.ipynb` file
 
-### Your cleaned images should be in the /images folder.
+*Your cleaned images should be in the /images folder.*
