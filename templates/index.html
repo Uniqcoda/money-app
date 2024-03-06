@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Object Detection</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>My Money App</h1>
+      <p>Select the image you want to predict</p>
+
+      <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required />
+        <button type="submit">Upload and Predict</button>
+      </form>
+
+      {% if predictions %}
+      <div class="predictions-container">
+        <h2>Predictions:</h2>
+        <p>Total amount: £{{total_amount}}p</p>
+
+        <div class="result">
+          <img
+            src="{{ image_path }}"
+            alt="Uploaded Image"
+            id="image"
+            style="width: {{img_width}}px;"
+          />
+
+          {% for box, label, score in predictions %}
+          <div
+            class="bbox"
+            style="left: {{ box[0] }}px; top: {{ box[2] }}px; width: {{ (box[1] - box[0]) }}px; height: {{ (box[3] - box[2]) }}px;"
+          >
+            <p>{{ label }}, {{ score }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </main>
+    <footer></footer>
+  </body>
+</html>

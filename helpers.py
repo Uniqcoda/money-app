@@ -36,3 +36,13 @@ def process_images(input_folder, output_folder, target_size=(1024, 1024)):
 
     print("Image processing complete.")
     return processed_count
+
+def get_total(labels):
+    total_pence = 0
+    for label in labels:
+        pence = int(label[:-1])  # Extracting numeric value from label
+        total_pence += pence
+
+    # Convert total pence to pounds and pence
+    total_pounds = total_pence / 100
+    return total_pounds

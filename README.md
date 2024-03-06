@@ -70,3 +70,44 @@ python3  preprocess.py
 If on Jupyter notebook, run the `preprocess_images.ipynb` file
 
 *Your cleaned images should be in the /images folder.*
+
+
+## Web App Setup
+
+1. Install dependencies  
+```
+pip install Flask google-cloud-aiplatform
+```
+
+2. Set up google cloud sdk
+If this is your first time accessing google cloud from your computer, do a set up by following the steps in the docs https://cloud.google.com/sdk/docs/install-sdk 
+
+3. Google cloud service account authentication 
+Ref: https://developers.google.com/identity/protocols/oauth2/service-account#python  
+Follow the setup instructions to  (i) create a service account and (ii) create a service account key  
+The new service account key will be downloaded to your computer. Move it to the directly you need. Then run
+```
+export GOOGLE_APPLICATION_CREDENTIALS="path/to/downloaded_key.json"
+```
+
+
+
+3. Start the Flask app
+```
+flask run
+```
+
+
+Sample model prediction result for single object detection
+```json
+{
+    "bboxes": [[0.316620409, 0.678313732, 0.435367882, 0.789723396]],
+    "confidences": [0.994227529], 
+    "displayNames": ["2p"], 
+    "ids": ["2112341057353023488"]
+}
+```
+Docs: https://cloud.google.com/vertex-ai/docs/image-data/object-detection/interpret-results 
+
+4. Final app
+![image info](./final-look.png)
