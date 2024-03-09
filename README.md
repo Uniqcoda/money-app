@@ -79,13 +79,10 @@ If on Jupyter notebook, run the `preprocess_images.ipynb` file
 pip install Flask google-cloud-aiplatform
 ```
 
-2. Set up google cloud sdk
-If this is your first time accessing google cloud from your computer, do a set up by following the steps in the docs https://cloud.google.com/sdk/docs/install-sdk 
-
-3. Google cloud service account authentication 
+2. Google cloud service account authentication 
 Ref: https://developers.google.com/identity/protocols/oauth2/service-account#python  
 Follow the setup instructions to  (i) create a service account and (ii) create a service account key  
-The new service account key will be downloaded to your computer. Move it to the directly you need. Then run
+The new service account key will be downloaded to your computer. Move it to the directly you need. Then add the file path to the script below and run
 ```
 export GOOGLE_APPLICATION_CREDENTIALS="path/to/downloaded_key.json"
 ```
