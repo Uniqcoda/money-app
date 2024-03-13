@@ -54,13 +54,14 @@ On JupyterLab
 
 
 ## Image Preprocessing
+[Video reference](https://youtu.be/Z4m0axcriuw?si=To0N2WfH6jZdhTjz)  
 
 ### 1. Install Pillow (on the virtual env)
 ```
 python3 -m pip install --upgrade Pillow
 ```
 
-### 2. 
+### 2. Run script to resize and crop images
 Add collected images to the `raw_images` folder  
 
 If running from vscode, run
@@ -72,7 +73,14 @@ If on Jupyter notebook, run the `preprocess_images.ipynb` file
 *Your cleaned images should be in the /images folder.*
 
 
+## Image Upload & Labelling
+This step would be done on the GCP VertexAI platform. Follow the [image upload and labelling video](https://youtu.be/Z4m0axcriuw?si=8bZe3-x8HiiCSp11) for further instructions.
+
+## Model Training, Evaluation & Deployment
+This step is also done on GCP VertexAI platform. Follow the [Model Training video](https://youtu.be/fZ6-Tq8K0vw?si=rPS9LaG3CmphyYLq) for further instructions.
+
 ## Web App Setup
+We would be using the endpoint from the deployed model in the previous step to create predictions for the web app.  
 
 1. Install dependencies  
 ```
