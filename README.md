@@ -3,7 +3,7 @@ An AI tool that counts coins using computer vision
 
 ![image info](./banner.png)
 
-### Video Demonstration
+### Video Demo
 See YouTube video [Build A Computer Vision App from Start to Finish](https://www.youtube.com/playlist?list=PL4gEDuKXcNsN14oPI5TcjJy8yiFoqnNzp)
 
 ## Setup
@@ -89,8 +89,8 @@ pip install Flask google-cloud-aiplatform
 
 2. Google cloud service account authentication 
 Ref: https://developers.google.com/identity/protocols/oauth2/service-account#python  
-Follow the setup instructions to  (i) create a service account and (ii) create a service account key  
-The new service account key will be downloaded to your computer. Move it to the directly you need. Then add the file path to the script below and run
+Follow the setup instructions to  (i) create a service account and (ii) create a service account key.  
+The new service account key will be downloaded to your computer. Move it to the directory/folder where you need it. Then add the file path to the script below and run
 ```
 export GOOGLE_APPLICATION_CREDENTIALS="path/to/downloaded_key.json"
 ```
