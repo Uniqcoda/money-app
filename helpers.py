@@ -49,4 +49,4 @@ def get_total(labels):
 
     # Convert total pence to pounds and pence
     total_pounds = total_pence / 100
-    return total_pounds
+    return "{:.2f}".format(total_pounds)

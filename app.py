@@ -30,8 +30,6 @@ def index():
                 filename=file_path
             )
 
-            # print(prediction)
-            
             # Process prediction here
             boxes = prediction['bboxes']
             labels = prediction['displayNames'] 
@@ -48,8 +46,6 @@ def index():
                 for x in box:
                     box_pixels.append(x * img_display_width)
                 boxes_pixels.append(box_pixels)
-
-            # print(boxes_pixels)
 
             # Zip the boxes, labels, and scores together
             zip_predictions = zip(boxes_pixels, labels, scores)

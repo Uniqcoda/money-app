@@ -96,6 +96,11 @@ flask run
 
 
 Sample model prediction result for single object detection
+```
+python3 test-prediction.py
+```
+Result
+
 ```json
 {
     "bboxes": [[0.316620409, 0.678313732, 0.435367882, 0.789723396]],
