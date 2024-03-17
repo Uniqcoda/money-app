@@ -1,14 +1,18 @@
 from flask import Flask, request, render_template
+from dotenv import load_dotenv
+import os
 
 from predict import predict_image_object_detection
 from helpers import get_total
 
 app = Flask(__name__)
 
-PROJECT_NUMBER = ''
-LOCATION = 'europe-west4'
-ENDPOINT_ID = ''
-API_ENDPOINT = "europe-west4-aiplatform.googleapis.com"
+# Import the API keys and other invironment variables
+load_dotenv()
+PROJECT_NUMBER = os.getenv('PROJECT_NUMBER')
+LOCATION = os.getenv('LOCATION')
+ENDPOINT_ID = os.getenv('ENDPOINT_ID')
+API_ENDPOINT = os.getenv('API_ENDPOINT')
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -29,7 +33,7 @@ def index():
                 api_endpoint=API_ENDPOINT,
                 filename=file_path
             )
-
+            
             # Process prediction here
             boxes = prediction['bboxes']
             labels = prediction['displayNames'] 

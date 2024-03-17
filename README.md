@@ -84,10 +84,18 @@ We would be using the endpoint from the deployed model in the previous step to c
 
 1. Install dependencies  
 ```
-pip install Flask google-cloud-aiplatform
+pip install Flask google-cloud-aiplatform python-dotenv
 ```
 
-2. Google cloud service account authentication 
+2. Add the API keys and other environment variables to the .env file
+```
+PROJECT_NUMBER=0000000000
+LOCATION=europe-west4
+ENDPOINT_ID=0000000000
+API_ENDPOINT=europe-west4-aiplatform.googleapis.com
+```
+
+3. Google cloud service account authentication 
 Ref: https://developers.google.com/identity/protocols/oauth2/service-account#python  
 Follow the setup instructions to  (i) create a service account and (ii) create a service account key.  
 The new service account key will be downloaded to your computer. Move it to the directory/folder where you need it. Then add the file path to the script below and run
@@ -97,7 +105,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="path/to/downloaded_key.json"
 
 
 
-3. Start the Flask app
+4. Start the Flask app
 ```
 flask run
 ```
@@ -119,5 +127,5 @@ Result
 ```
 Docs: https://cloud.google.com/vertex-ai/docs/image-data/object-detection/interpret-results 
 
-4. Final app
+5. Final app
 ![image info](./final-look.png)
