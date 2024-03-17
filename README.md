@@ -74,7 +74,8 @@ If on Jupyter notebook, run the `preprocess_images.ipynb` file
 
 
 ## Image Upload & Labelling
-This step would be done on the GCP VertexAI platform. Follow the [image upload and labelling video](https://youtu.be/Z4m0axcriuw?si=8bZe3-x8HiiCSp11) for further instructions.
+=> This step would be done on the GCP VertexAI platform. Follow the [image upload and labelling video](https://youtu.be/Z4m0axcriuw?si=8bZe3-x8HiiCSp11) for further instructions.  
+=> Also check out [Vertex AI documentation on object detection](https://cloud.google.com/vertex-ai/docs/image-data/object-detection/prepare-data). This docs is also applicable to model training, evaluation, deployment and testing.
 
 ## Model Training, Evaluation & Deployment
 This step is also done on GCP VertexAI platform. Follow the [Model Training video](https://youtu.be/fZ6-Tq8K0vw?si=rPS9LaG3CmphyYLq) for further instructions.
@@ -87,7 +88,7 @@ We would be using the endpoint from the deployed model in the previous step to c
 pip install Flask google-cloud-aiplatform python-dotenv
 ```
 
-2. Add the API keys and other environment variables to the .env file
+2. Create a new file named `.env`, under the root directory (main folder). Add the API keys and other environment variables to the .env file.
 ```
 PROJECT_NUMBER=0000000000
 LOCATION=europe-west4
